@@ -9,6 +9,28 @@ use stdClass;
 
 class ArticleController extends Controller
 {
+    /**
+     * @OA\Get(
+     *   path="/api/articles",
+     *   tags={"Article"},
+     *   summary="Get All",
+     *   operationId="index",
+     * 
+     *   @OA\Response(
+     *      response=200,
+     *       description="Success",
+     *      @OA\MediaType(
+     *           mediaType="application/json",
+     *      )
+     *   ),
+     *)
+     **/
+     /**
+     * register account of the application.
+     *
+     * @param  \App\Http\Requests\UserRegisterRequest  $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     */
     public function index()
     {
         $article = Article::all();
