@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Reader;
+use App\Models\Comment;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ReaderPolicy
+class CommentPolicy
 {
     use HandlesAuthorization;
 
@@ -25,10 +25,10 @@ class ReaderPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Reader  $reader
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Reader $reader)
+    public function view(User $user, Comment $comment)
     {
         //
     }
@@ -48,10 +48,10 @@ class ReaderPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Reader  $reader
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Reader $reader)
+    public function update(User $user, Comment $comment)
     {
         //
     }
@@ -60,10 +60,10 @@ class ReaderPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Reader  $reader
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Reader $reader)
+    public function delete(User $user, Comment $comment)
     {
         //
     }
@@ -72,10 +72,10 @@ class ReaderPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Reader  $reader
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Reader $reader)
+    public function restore(User $user, Comment $comment)
     {
         //
     }
@@ -84,10 +84,10 @@ class ReaderPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Reader  $reader
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Reader $reader)
+    public function forceDelete(User $user, Comment $comment)
     {
         //
     }

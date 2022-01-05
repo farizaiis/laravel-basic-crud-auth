@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Reader;
-use App\Http\Requests\StoreReaderRequest;
-use App\Http\Requests\UpdateReaderRequest;
+use App\Models\Category;
+use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
 
-class ReaderController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class ReaderController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreReaderRequest  $request
+     * @param  \App\Http\Requests\StoreCategoryRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreReaderRequest $request)
+    public function store(StoreCategoryRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class ReaderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Reader  $reader
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Reader $reader)
+    public function show(Category $category)
     {
         //
     }
@@ -53,10 +53,10 @@ class ReaderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Reader  $reader
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Reader $reader)
+    public function edit(Category $category)
     {
         //
     }
@@ -64,11 +64,11 @@ class ReaderController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateReaderRequest  $request
-     * @param  \App\Models\Reader  $reader
+     * @param  \App\Http\Requests\UpdateCategoryRequest  $request
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateReaderRequest $request, Reader $reader)
+    public function update(UpdateCategoryRequest $request, Category $category)
     {
         //
     }
@@ -76,10 +76,10 @@ class ReaderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Reader  $reader
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reader $reader)
+    public function destroy(Category $category)
     {
         //
     }

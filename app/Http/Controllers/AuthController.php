@@ -60,8 +60,8 @@ class AuthController extends Controller
      *                      @OA\Property(property="updated_at", type="string", example="2021-12-11T09:25:53.000000Z"),
      *                      @OA\Property(property="created_at", type="string", example="2021-12-11T09:25:53.000000Z"),
      *                      @OA\Property(property="id", type="number", example=1),
-     *              ),
-     *              @OA\Property(property="token", type="string", example="2|yqMYXWY3KYziZtVka00OVjC9q5FeOiJs4wcqbhGj"),
+        *              ),
+        *              @OA\Property(property="token", type="string", example="2|yqMYXWY3KYziZtVka00OVjC9q5FeOiJs4wcqbhGj"),
      *          )
      *      ),
      *      @OA\Response(
@@ -92,7 +92,7 @@ class AuthController extends Controller
             'password' => bcrypt($fields['password'])
         ]);
 
-        $token = $user->createToken('myapptoken')->plainTextToken;
+        $token = $user->createToken('myapptoken')->accessToken;
 
         $res = new stdClass();
         $res->message = 'Register Success';
@@ -175,7 +175,7 @@ class AuthController extends Controller
             ], 401);
         }
 
-        $token = $user->createToken('myapptoken')->plainTextToken;
+        $token = $user->createToken('myapptoken');
 
         $res = new stdClass();
         $res->message = 'Login Success';

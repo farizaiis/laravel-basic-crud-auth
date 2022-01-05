@@ -21,14 +21,14 @@ use App\Http\Controllers\AuthController;
 // });
 
 //Protect (authentication)
-Route::group(['middleware' => ['auth:sanctum']], function() {
+Route::group(['middleware' => ['auth:api']], function() {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/articles', [ArticleController::class, 'store']);
     Route::put('/articles/{id}', [ArticleController::class, 'update']);
    
 });
 
-Route::group(['middleware' => ['auth:sanctum', 'role']], function() {
+Route::group(['middleware' => ['auth:api', 'role']], function() {
     Route::delete('/articles/{id}', [ArticleController::class, 'destroy']);
 });
 
